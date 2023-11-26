@@ -24,6 +24,18 @@ export class MaterialPerformanceTestComponent implements AfterViewInit, OnDestro
     const renderer = this._renderer = new WebGLRenderer({ canvas, antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
+    // const da = renderer.getContext().drawArrays;
+    // renderer.getContext().drawArrays = (...args) => {
+    //   console.log("draw");
+    //   da(...args);
+    // }
+
+    // const de = renderer.getContext().drawElements;
+    // renderer.getContext().drawElements = (...args) => {
+    //   console.log("draw2");
+    //   // de(...args);
+    // }
+
     const color = 0xFFFFFF;
     const light = new DirectionalLight(color, 1);
     light.position.set(-1, 2, 4);
@@ -44,6 +56,9 @@ export class MaterialPerformanceTestComponent implements AfterViewInit, OnDestro
       cube.position.set(Math.random() * 200 - 100, Math.random() * 200 - 100, Math.random() * 20 - 10);
       scene.add(cube);
     }
+
+    // renderer.render(scene, camera);
+    // return;
 
     let frames = 0, prevTime = performance.now();
     renderer.setAnimationLoop(() => {

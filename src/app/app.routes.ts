@@ -4,6 +4,7 @@ import { MaterialPerformanceTestComponent } from './three/material-performance-t
 import { WorkerTestComponent } from './webgl/worker-test/worker-test.component';
 import { ColorTriangleComponent } from './webgl/color-triangle/color-triangle.component';
 import { ShapesComponent } from './webgl/shapes/shapes.component';
+import { TransformComponent } from './webgl/transform/transform.component';
 
 export const routes: Routes = [
     {
@@ -26,5 +27,9 @@ export const routes: Routes = [
     {
         path: 'webgl-shapes',
         component: ShapesComponent
+    },
+    {
+        path: 'webgl-transform',
+        component: TransformComponent
     }
 ];

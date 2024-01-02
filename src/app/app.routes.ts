@@ -5,6 +5,7 @@ import { WorkerTestComponent } from './webgl/worker-test/worker-test.component';
 import { ColorTriangleComponent } from './webgl/color-triangle/color-triangle.component';
 import { ShapesComponent } from './webgl/shapes/shapes.component';
 import { TransformComponent } from './webgl/transform/transform.component';
+import { WebworkerComponent } from './three/webworker/webworker.component';
 
 export const routes: Routes = [
     {
@@ -31,5 +32,9 @@ export const routes: Routes = [
     {
         path: 'webgl-transform',
         component: TransformComponent
+    },
+    {
+        path: 'three-webworker',
+        component: WebworkerComponent
     }
 ];
